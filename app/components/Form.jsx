@@ -54,10 +54,11 @@ function Form() {
       >
         <div className="w-full flex flex-col gap-5 sm:flex sm:flex-row ">
           <div className="sm:w-1/2 flex flex-col gap-2">
-            <label>
+            <label htmlFor="firstname">
               First Name <span className="text-[#0A7D69]">*</span>
             </label>
             <input
+              id="firstname"
               {...register("firstName", {
                 required: {
                   value: true,
@@ -81,10 +82,11 @@ function Form() {
             )}
           </div>
           <div className="sm:w-1/2 flex flex-col gap-2">
-            <label>
+            <label htmlFor="lastname">
               Last Name <span className="text-[#0A7D69]">*</span>
             </label>
             <input
+              id="lastname"
               {...register("lastName", {
                 required: {
                   value: true,
@@ -108,10 +110,11 @@ function Form() {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <label>
+          <label htmlFor="email">
             Email Adress <span className="text-[#0A7D69]">*</span>
           </label>
           <input
+            id="email"
             {...register("email", {
               pattern: {
                 value: /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/,
@@ -170,10 +173,11 @@ function Form() {
               {errors.radio.message}
             </p>
           )}
-          <label className="mt-2">
+          <label htmlFor="textarea" className="mt-2">
             Message <span className="text-[#0A7D69]">*</span>
           </label>
           <textarea
+            id="textarea"
             className={`resize-none px-4 py-2 border border-solid rounded-md ${
               errors.textarea ? "border-red-500" : ""
             }`}
