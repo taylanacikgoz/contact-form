@@ -7,7 +7,7 @@ import Form from "./components/Form";
 
 export default function Home() {
   return (
-    <main className="text-[#1d594f] font-medium font-karla bg-[#E2F1E7] flex items-center justify-center min-h-screen">
+    <main className="text-[#2B4246] font-medium font-karla bg-[#E2F1E7] flex items-center justify-center min-h-screen">
       <ToastContainer
         autoClose={false}
         icon={false}
