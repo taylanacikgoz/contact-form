@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --toastify-toast-width: 750px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --toastify-toast-background: #de5b;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:hover,
+input:focus {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.Toastify__toast {
+  margin-top: 20px;
+  height: 100px;
+}
+
+.Toastify__toast--success {
+  color: white;
+  background-color: hsl(187, 24%, 22%) !important;
+}
